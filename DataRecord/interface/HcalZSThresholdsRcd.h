@@ -19,8 +19,9 @@
 // $Id: HcalZSThresholdsRcd.h,v 1.1 2007/11/24 16:54:13 rofierzy Exp $
 //
 
-#include "FWCore/Framework/interface/EventSetupRecordImplementation.h"
+#include "FWCore/Framework/interface/DependentRecordImplementation.h"
+#include "Geometry/Records/interface/IdealGeometryRecord.h"
 
-class HcalZSThresholdsRcd : public edm::eventsetup::EventSetupRecordImplementation<HcalZSThresholdsRcd> {};
+class HcalZSThresholdsRcd : public edm::eventsetup::DependentRecordImplementation<HcalZSThresholdsRcd, boost::mpl::vector<IdealGeometryRecord> > {};
 
 #endif

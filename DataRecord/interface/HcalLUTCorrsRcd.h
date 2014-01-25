@@ -19,8 +19,9 @@
 // $Id: HcalLUTCorrsRcd.h,v 1.1 2009/05/19 16:05:39 rofierzy Exp $
 //
 
-#include "FWCore/Framework/interface/EventSetupRecordImplementation.h"
+#include "FWCore/Framework/interface/DependentRecordImplementation.h"
+#include "Geometry/Records/interface/IdealGeometryRecord.h"
 
-class HcalLUTCorrsRcd : public edm::eventsetup::EventSetupRecordImplementation<HcalLUTCorrsRcd> {};
+class HcalLUTCorrsRcd : public edm::eventsetup::DependentRecordImplementation<HcalLUTCorrsRcd, boost::mpl::vector<IdealGeometryRecord> > {};
 
 #endif

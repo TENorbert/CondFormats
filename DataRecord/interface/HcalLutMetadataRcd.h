@@ -19,8 +19,9 @@
 // $Id: HcalLutMetadataRcd.h,v 1.1 2009/09/18 14:25:15 kukartse Exp $
 //
 
-#include "FWCore/Framework/interface/EventSetupRecordImplementation.h"
+#include "FWCore/Framework/interface/DependentRecordImplementation.h"
+#include "Geometry/Records/interface/IdealGeometryRecord.h"
 
-class HcalLutMetadataRcd : public edm::eventsetup::EventSetupRecordImplementation<HcalLutMetadataRcd> {};
+class HcalLutMetadataRcd : public edm::eventsetup::DependentRecordImplementation<HcalLutMetadataRcd, boost::mpl::vector<IdealGeometryRecord> > {};
 
 #endif

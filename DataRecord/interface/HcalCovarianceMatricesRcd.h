@@ -19,8 +19,9 @@
 // $Id: HcalCovarianceMatricesRcd.h,v 1.1 2010/04/26 22:13:34 kukartse Exp $
 //
 
-#include "FWCore/Framework/interface/EventSetupRecordImplementation.h"
+#include "FWCore/Framework/interface/DependentRecordImplementation.h"
+#include "Geometry/Records/interface/IdealGeometryRecord.h"
 
-class HcalCovarianceMatricesRcd : public edm::eventsetup::EventSetupRecordImplementation<HcalCovarianceMatricesRcd> {};
+class HcalCovarianceMatricesRcd : public edm::eventsetup::DependentRecordImplementation<HcalCovarianceMatricesRcd, boost::mpl::vector<IdealGeometryRecord> > {};
 
 #endif
